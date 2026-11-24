@@ -1,0 +1,13 @@
+export function typingMetrics(target,typed,seconds){
+ const expected=String(target).slice(0,2000),actual=String(typed).slice(0,2000);
+ const reference=expected.slice(0,actual.length);let previous=Array.from({length:reference.length+1},(_,i)=>i);
+ for(let i=1;i<=actual.length;i++){const row=[i];for(let j=1;j<=reference.length;j++)row[j]=Math.min(row[j-1]+1,previous[j]+1,previous[j-1]+(actual[i-1]===reference[j-1]?0:1));previous=row;}
+ const differences=previous.at(-1),correct=Math.max(0,actual.length-differences);
+ return {characters:actual.length,differences,accuracy:actual.length?Math.round(correct/actual.length*100):0,wpm:seconds>0?Math.round(correct/5/(seconds/60)):0,progress:expected.length?Math.min(100,Math.round(actual.length/expected.length*100)):0};
+}
+export const typingSamples=[
+ {id:'education',title:'教育与学习',text:'Education gives people the tools to understand the world around them. However, learning does not end when students leave the classroom. Reading widely, asking questions and discussing different ideas can help people develop throughout their lives. Schools should encourage curiosity as well as careful thinking, so that young people can make informed decisions.'},
+ {id:'cities',title:'城市与交通',text:'A reliable public transport system can make a city more accessible. When buses and trains are frequent and affordable, residents have more opportunities to travel without a car. Safe walking routes and cycle lanes also play an important role. Good transport planning should consider the needs of older people, families and people with disabilities.'},
+ {id:'environment',title:'环境与日常生活',text:'Small changes in daily life can reduce waste, but individual action works best alongside wider improvements. Local authorities can provide convenient recycling facilities, while businesses can design products that last longer. Clear information helps consumers compare their options. Progress depends on practical choices that people can maintain over time.'}
+];
+export function validTypingDraft(value){return value===null||Boolean(value&&typeof value==='object'&&!Array.isArray(value)&&typeof value.target==='string'&&value.target.length>0&&value.target.length<=2000&&typeof value.typed==='string'&&value.typed.length<=2000&&['active','finished'].includes(value.status)&&Number.isFinite(value.startedAt)&&Number.isFinite(value.deadline)&&[60,180,300].includes(value.duration)&&value.deadline===value.startedAt+value.duration*1000&&(value.finishedAt==null||Number.isFinite(value.finishedAt))&&(value.metrics==null||(['characters','differences','accuracy','wpm','progress'].every(k=>Number.isFinite(value.metrics[k])&&value.metrics[k]>=0)&&value.metrics.accuracy<=100&&value.metrics.progress<=100)));}

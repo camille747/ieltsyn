@@ -1,0 +1,19 @@
+.ai-settings { min-width:0; color:var(--ink); }
+.ai-settings header h2 { margin:0 0 10px; font:700 24px var(--serif); }
+.ai-settings p { font-size:14px; line-height:1.8; margin:0; color:var(--muted); overflow-wrap:anywhere; }
+.ai-settings .ai-settings-help { margin:12px 0 0; }
+.ai-settings form { display:grid; grid-template-columns:minmax(0,1fr); gap:10px; margin:24px 0 20px; max-width:640px; }
+.ai-settings form label { font-size:14px; font-weight:700; margin:10px 0 0; }
+.ai-settings form label:first-child { margin-top:0; }
+.ai-settings form input:not([hidden]),.ai-settings form select { display:block; box-sizing:border-box; width:100%; min-width:0; min-height:44px; border:1px solid var(--line); border-radius:8px; padding:11px 12px; font:inherit; font-size:14px; color:var(--ink); background:var(--white); }
+.ai-settings form input::placeholder { color:var(--muted); opacity:1; }
+.ai-settings form input:focus-visible,.ai-settings form select:focus-visible { outline:2px solid var(--action); outline-offset:3px; }
+.ai-settings form input:disabled,.ai-settings form select:disabled { opacity:.6; }
+.ai-settings .ai-settings-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:10px; }
+.ai-settings .ai-settings-message { margin:16px 0; padding:12px 16px; border:1px solid var(--line); border-radius:8px; color:var(--ink); background:var(--fog); }
+.ai-settings>button { margin-top:16px; }
+.ui-settings-panel.ai-settings-panel { padding:var(--ui-panel-pad); }
+.studio-ai-settings { max-width:760px; }
+.studio-ai-settings>.ai-settings { padding:28px; border:1px solid var(--line); border-radius:12px; }
+@media(max-width:600px) { .studio-ai-settings>.ai-settings { padding:20px; } }
+.ui-settings-panel.ai-settings-panel>.ai-settings { display:block; padding:0; }

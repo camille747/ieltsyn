@@ -1,0 +1,34 @@
+[
+  {
+    "id": "232-001",
+    "collection": "232",
+    "part": "P1",
+    "title": "Community workshop booking · 原创示例",
+    "frequency": "非高频",
+    "hasAudio": true
+  },
+  {
+    "id": "232-002",
+    "collection": "232",
+    "part": "P2",
+    "title": "Library tour · 原创示例",
+    "frequency": "非高频",
+    "hasAudio": true
+  },
+  {
+    "id": "232-003",
+    "collection": "232",
+    "part": "P3",
+    "title": "Student project meeting · 原创示例",
+    "frequency": "非高频",
+    "hasAudio": true
+  },
+  {
+    "id": "232-004",
+    "collection": "232",
+    "part": "P4",
+    "title": "A talk about urban trees · 原创示例",
+    "frequency": "非高频",
+    "hasAudio": true
+  }
+]

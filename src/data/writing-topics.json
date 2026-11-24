@@ -1,0 +1,24 @@
+{
+  "source": "Original IELTSyn demonstrations; not official past questions",
+  "total": 1,
+  "primaryTopics": [
+    "教育"
+  ],
+  "questionTypes": [
+    "观点"
+  ],
+  "topics": [
+    {
+      "id": "demo-writing-2",
+      "primaryTopic": "教育",
+      "secondaryTopic": "自主学习",
+      "essayQuestion": "Some people prefer learning a practical skill by watching short videos. Others prefer learning with a teacher. Discuss both views and give your opinion.",
+      "examFocus": "比较学习方式",
+      "questionType": "观点",
+      "factOrOpinion": "观点",
+      "outline": "",
+      "absoluteTerms": "",
+      "detailFields": []
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "source": "原创练习示例（非官方真题）",
+  "part1": [
+    {
+      "id": "demo-p1",
+      "title": "Learning a new skill",
+      "questions": [
+        "What skill would you like to learn next?",
+        "Where do you usually find useful learning materials?",
+        "Do you prefer learning alone or with someone else?"
+      ],
+      "status": "原创示例"
+    }
+  ],
+  "pairs": [
+    {
+      "id": "demo-pair",
+      "title": "Describe a useful skill that you learned recently.",
+      "cue": [
+        "What the skill is",
+        "How you learned it",
+        "When you use it",
+        "Why it is useful to you"
+      ],
+      "part3": [
+        "How can schools help students learn practical skills?",
+        "Why might adults choose to return to education?",
+        "What makes feedback useful when someone is learning?"
+      ]
+    }
+  ]
+}

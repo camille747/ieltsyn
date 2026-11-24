@@ -1,0 +1,16 @@
+module.exports = {
+  appId: "com.ielts.speakingstudio",
+  productName: "IELTS Speaking Studio",
+  extraMetadata: { name: "ielts-speaking-studio", main: "desktop/speaking-main.mjs" },
+  extends: null,
+  electronDist: "node_modules/electron/dist",
+  asar: true,
+  asarUnpack: ["speaking-app/dist/shadowing/media/**/*"],
+  files: ["speaking-app/dist/**/*", "desktop/**/*", "package.json"],
+  directories: { output: "release/speaking", buildResources: "build" },
+  mac: { target: [{ target: "dmg", arch: ["arm64"] }],
+    icon: "build/icon.iconset/icon_512x512@2x.png", category: "public.app-category.education",
+    identity: null, extendInfo: { NSMicrophoneUsageDescription: "录制口语和逐句跟读练习，录音保存在本机。" },
+    artifactName: "IELTS-Speaking-Studio-${version}-${arch}.${ext}" },
+  dmg: { title: "IELTS Speaking Studio" },
+};

@@ -1,0 +1,47 @@
+{
+  "title": "A talk about urban trees (original demonstration)",
+  "audio": "/media/listening-232/232-004.mp3",
+  "questionIds": [
+    "1"
+  ],
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 1",
+      "instruction": "Complete the sentence. Write ONE WORD only.",
+      "questions": [
+        {
+          "id": "1",
+          "text": "Urban trees provide ______ for pedestrians in summer."
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "Urban trees provide ______ for pedestrians in summer.",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerKey": {
+    "text": {
+      "q1": "shade"
+    },
+    "single": {},
+    "multiple": {},
+    "multipleMap": {},
+    "matching": {},
+    "map": {}
+  },
+  "transcriptLines": [
+    {
+      "time": "00:00:00,000 --> 00:00:12,000",
+      "html": "Urban trees provide shade for pedestrians in summer.",
+      "cn": "原创流程示例，请听录音完成填空。",
+      "analysis": ""
+    }
+  ],
+  "transcriptHighlights": [],
+  "ownerInfo": "Original IELTSyn demonstration; not an official IELTS question."
+}

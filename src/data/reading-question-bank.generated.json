@@ -1,0 +1,137 @@
+[
+  {
+    "id": "demo-reading-1",
+    "articleId": "1",
+    "archiveItemId": "demo-reading-1",
+    "groupId": "original-demo",
+    "part": "P1",
+    "frequency": "非高频",
+    "title": "A community reading room",
+    "chineseTitle": "社区阅览室",
+    "topic": "原创流程示例",
+    "feishuLink": "",
+    "pdfUrl": "/resources/reading/demo/demo-reading-1.pdf",
+    "textUrl": "/resources/reading/demo/demo-reading-1.txt",
+    "pageCount": 1,
+    "questionPageIndex": 0,
+    "analysisAssets": [],
+    "analysisImages": [],
+    "analysisSource": "Original IELTSyn demonstration",
+    "intro": "",
+    "introTranslation": "",
+    "paragraphs": [
+      {
+        "id": "A",
+        "text": "The Oak Street reading room opened in spring. Local volunteers donated books and arranged weekly reading sessions. Visitors can borrow two books at a time. The room closes at six every evening.",
+        "translation": "春天，橡树街阅览室开放了。当地志愿者捐书并每周组织阅读。访客一次可以借两本书，阅览室每晚六点关门。"
+      }
+    ],
+    "questionGroups": [
+      {
+        "id": "1",
+        "type": "text",
+        "title": "Question 1",
+        "instruction": "Complete the sentence. Write ONE WORD only.",
+        "questions": [
+          {
+            "id": "1",
+            "text": "The reading room opened in ______.",
+            "answer": "spring",
+            "explanation": "A 段原文包含 spring，对应本题填空。"
+          }
+        ]
+      }
+    ],
+    "ready": true
+  },
+  {
+    "id": "demo-reading-2",
+    "articleId": "2",
+    "archiveItemId": "demo-reading-2",
+    "groupId": "original-demo",
+    "part": "P2",
+    "frequency": "非高频",
+    "title": "Learning through a small garden",
+    "chineseTitle": "在小花园中学习",
+    "topic": "原创流程示例",
+    "feishuLink": "",
+    "pdfUrl": "/resources/reading/demo/demo-reading-2.pdf",
+    "textUrl": "/resources/reading/demo/demo-reading-2.txt",
+    "pageCount": 1,
+    "questionPageIndex": 0,
+    "analysisAssets": [],
+    "analysisImages": [],
+    "analysisSource": "Original IELTSyn demonstration",
+    "intro": "",
+    "introTranslation": "",
+    "paragraphs": [
+      {
+        "id": "A",
+        "text": "A school created a small garden beside its library. Each class planted one type of vegetable. Pupils recorded the height of the plants every Monday. The teachers used these records to explain how regular observations can reveal gradual change.",
+        "translation": "学校在图书馆旁建了小花园，每班种一种蔬菜。学生每周一记录植物高度，老师借这些记录解释如何观察渐进的变化。"
+      }
+    ],
+    "questionGroups": [
+      {
+        "id": "1",
+        "type": "text",
+        "title": "Question 1",
+        "instruction": "Complete the sentence. Write ONE WORD only.",
+        "questions": [
+          {
+            "id": "1",
+            "text": "Pupils recorded plant height every ______.",
+            "answer": "Monday",
+            "explanation": "A 段原文包含 Monday，对应本题填空。"
+          }
+        ]
+      }
+    ],
+    "ready": true
+  },
+  {
+    "id": "demo-reading-3",
+    "articleId": "3",
+    "archiveItemId": "demo-reading-3",
+    "groupId": "original-demo",
+    "part": "P3",
+    "frequency": "非高频",
+    "title": "Designing a quieter street",
+    "chineseTitle": "设计安静的街道",
+    "topic": "原创流程示例",
+    "feishuLink": "",
+    "pdfUrl": "/resources/reading/demo/demo-reading-3.pdf",
+    "textUrl": "/resources/reading/demo/demo-reading-3.txt",
+    "pageCount": 1,
+    "questionPageIndex": 0,
+    "analysisAssets": [],
+    "analysisImages": [],
+    "analysisSource": "Original IELTSyn demonstration",
+    "intro": "",
+    "introTranslation": "",
+    "paragraphs": [
+      {
+        "id": "A",
+        "text": "Residents of Maple Road wanted a quieter street. Instead of closing the road, the council introduced a lower speed limit and wider pavements. A survey conducted after six months found that most residents preferred the new arrangement. The survey did not measure air quality.",
+        "translation": "枫树路居民希望街道更安静。议会降低了限速并拓宽人行道，而非封路。六个月后的调查发现多数居民更喜欢新方案。调查没有测量空气质量。"
+      }
+    ],
+    "questionGroups": [
+      {
+        "id": "1",
+        "type": "text",
+        "title": "Question 1",
+        "instruction": "Complete the sentence. Write ONE WORD only.",
+        "questions": [
+          {
+            "id": "1",
+            "text": "The survey took place after ______ months.",
+            "answer": "six",
+            "explanation": "A 段原文包含 six，对应本题填空。"
+          }
+        ]
+      }
+    ],
+    "ready": true
+  }
+]

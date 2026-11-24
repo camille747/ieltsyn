@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head><link rel="icon" type="image/svg+xml" href="./favicon.svg"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>IELTSyn</title>
+    <style>
+      .boot-loading { position: fixed; inset: 0; display: grid; place-items: center; background: #fafafb; color: #17191c; }
+      .boot-quarter-ring { width: 24px; height: 24px; border-radius: 50%; background: conic-gradient(from -90deg, currentColor 0 25%, transparent 25% 100%); -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1.5px)); mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1.5px)); animation: boot-quarter-ring-spin .72s linear infinite; }
+      @keyframes boot-quarter-ring-spin { to { transform: rotate(360deg); } }
+    </style>
+  </head>
+  <body>
+    <div id="root"><div class="boot-loading" role="status" aria-label="正在启动"><span class="boot-quarter-ring" aria-hidden="true"></span></div></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

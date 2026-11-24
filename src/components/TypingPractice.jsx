@@ -1,0 +1,23 @@
+import { exportStudyPdf } from "../lib/studyDocuments";
+import {useEffect,useRef,useState} from 'react';
+import {Button,Segmented} from './Common';
+import {readValue,writeValue} from '../lib/persistence';
+import {recordStudyActivity} from '../lib/localStudyStore';
+import {typingSamples,typingMetrics,validTypingDraft} from '../lib/typingPractice';
+const key='ielts-typing-draft-v1';
+export default function TypingPractice(){
+ const [sample,setSample]=useState(typingSamples[0].id),[duration,setDuration]=useState(180),[custom,setCustom]=useState('');
+ const [draft,setDraft]=useState(()=>{const value=readValue(key);return validTypingDraft(value)?value:null;}),[now,setNow]=useState(Date.now()),[error,setError]=useState('');
+ const latest=useRef(draft);latest.current=draft;const input=useRef(null);
+ const commit=value=>{latest.current=value;setDraft(value);try{writeValue(key,value);setError('');return true;}catch{setError('本机保存失败，请导出本次练习后检查存储空间。');return false;}};
+ const saveRecord=value=>{try{recordStudyActivity({id:`typing:${value.startedAt}`,subject:'打字',page:'writing',title:'英语打字训练',detail:`${value.metrics.wpm} WPM · 准确率 ${value.metrics.accuracy}%`,durationSeconds:Math.max(0,Math.round((value.finishedAt-value.startedAt)/1000)),submitted:true,submittedAt:value.finishedAt,typing:value,intent:{tab:'typing'}});setError('');}catch{setError('练习已结束，但记录暂未写入；可以重试保存或导出结果。');}};
+ const finish=()=>{const value=latest.current;if(!value||value.status!=='active')return;const finishedAt=Math.min(Date.now(),value.deadline);const next={...value,status:'finished',finishedAt,metrics:typingMetrics(value.target,value.typed,Math.max(0,(finishedAt-value.startedAt)/1000))};const stored=commit(next);if(stored)saveRecord(next);};
+ useEffect(()=>{if(draft?.status!=='active')return;const tick=()=>{setNow(Date.now());if(Date.now()>=latest.current.deadline)finish();};tick();const timer=setInterval(tick,250);return()=>clearInterval(timer);},[draft?.status,draft?.startedAt]);
+ const start=()=>{const target=(sample==='custom'?custom:typingSamples.find(s=>s.id===sample)?.text)?.trim();if(!target){setError('请先填写练习文本。');return;}const startedAt=Date.now();commit({target,typed:'',duration,startedAt,deadline:startedAt+duration*1000,status:'active'});setNow(startedAt);setTimeout(()=>input.current?.focus(),0);};
+ const update=e=>{const value=latest.current;if(!value||value.status!=='active')return;if(Date.now()>=value.deadline){finish();return;}commit({...value,typed:e.target.value.slice(0,2000)});};
+ const seconds=draft?Math.min(draft.duration,Math.max(0,((draft.finishedAt||now)-draft.startedAt)/1000)):0;
+ const metrics=draft?(draft.metrics||typingMetrics(draft.target,draft.typed,seconds)):null;
+ return <section className="typing-practice"><h2>英语打字训练</h2><p>练习英文输入、大小写与标点。计时从点击开始起算，速度按正确字符每五个折合一词；只统计本次输入与原文的差异。</p>
+ {!draft?<><label className="review-note-field">练习材料<select value={sample} onChange={e=>setSample(e.target.value)}>{typingSamples.map(s=><option key={s.id} value={s.id}>{s.title}</option>)}<option value="custom">自己的文本</option></select></label>{sample==='custom'&&<label className="review-note-field">粘贴英文材料<textarea value={custom} maxLength={2000} onChange={e=>setCustom(e.target.value)}/></label>}<Segmented label="打字时长" value={duration} onChange={setDuration} options={[{value:60,label:'1 分钟'},{value:180,label:'3 分钟'},{value:300,label:'5 分钟'}]}/><Button onClick={start} disabled={sample==='custom'&&!custom.trim()}>开始打字练习</Button></>:<><div className="typing-stats" aria-live="off"><strong>{draft.status==='active'?`剩余 ${Math.max(0,Math.ceil((draft.deadline-now)/1000))} 秒`:'练习已结束'}</strong><span>{metrics.wpm} WPM</span><span>准确率 {metrics.accuracy}%</span><span>进度 {metrics.progress}%</span></div><div className="typing-source" aria-label="打字原文">{[...draft.target].map((char,i)=><span key={i} className={i>=draft.typed.length?'':char===draft.typed[i]?'matched':'mismatched'}>{char}</span>)}</div><label className="review-note-field">在此输入<textarea ref={input} value={draft.typed} onChange={update} disabled={draft.status!=='active'} spellCheck={false} autoComplete="off" autoCorrect="off" autoCapitalize="off" onPaste={e=>{e.preventDefault();setError('请逐字输入；练习材料可以在开始前粘贴。');}} placeholder="按上方原文输入，标点与大小写也需要一致"/></label><div className="review-controls">{draft.status==='active'?<Button onClick={finish}>结束并保存</Button>:<><Button onClick={()=>{if(error){setError('请先重试保存或导出本次结果。');return;}commit(null);}}>再练一次</Button><Button variant="ghost" onClick={()=>{if(commit(draft))saveRecord(draft);}}>重试保存记录</Button></>}<Button variant="ghost" onClick={()=>exportStudyPdf(draft,'IELTS-打字练习.pdf')}>导出本次练习 PDF</Button></div></>}
+ {error&&<p role="alert">{error}</p>}</section>;
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Community workshop booking (original demonstration)",
+  "audio": "/media/listening-232/232-001.mp3",
+  "questionIds": [
+    "1"
+  ],
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 1",
+      "instruction": "Complete the sentence. Write ONE WORD only.",
+      "questions": [
+        {
+          "id": "1",
+          "text": "The community workshop takes place on ______."
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "The community workshop takes place on ______.",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerKey": {
+    "text": {
+      "q1": "Friday"
+    },
+    "single": {},
+    "multiple": {},
+    "multipleMap": {},
+    "matching": {},
+    "map": {}
+  },
+  "transcriptLines": [
+    {
+      "time": "00:00:00,000 --> 00:00:12,000",
+      "html": "The community workshop takes place on Friday.",
+      "cn": "原创流程示例，请听录音完成填空。",
+      "analysis": ""
+    }
+  ],
+  "transcriptHighlights": [],
+  "ownerInfo": "Original IELTSyn demonstration; not an official IELTS question."
+}

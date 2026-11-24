@@ -1,0 +1,47 @@
+{
+  "title": "Library tour (original demonstration)",
+  "audio": "/media/listening-232/232-002.mp3",
+  "questionIds": [
+    "1"
+  ],
+  "groups": [
+    {
+      "type": "fill",
+      "title": "Question 1",
+      "instruction": "Complete the sentence. Write ONE WORD only.",
+      "questions": [
+        {
+          "id": "1",
+          "text": "The quiet reading room is on the ______ floor."
+        }
+      ],
+      "bodyLines": [
+        {
+          "text": "The quiet reading room is on the ______ floor.",
+          "list": false,
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "answerKey": {
+    "text": {
+      "q1": "second"
+    },
+    "single": {},
+    "multiple": {},
+    "multipleMap": {},
+    "matching": {},
+    "map": {}
+  },
+  "transcriptLines": [
+    {
+      "time": "00:00:00,000 --> 00:00:12,000",
+      "html": "The quiet reading room is on the second floor.",
+      "cn": "原创流程示例，请听录音完成填空。",
+      "analysis": ""
+    }
+  ],
+  "transcriptHighlights": [],
+  "ownerInfo": "Original IELTSyn demonstration; not an official IELTS question."
+}

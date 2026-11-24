@@ -1,0 +1,26 @@
+node_modules/
+.tools/
+dist/
+release/
+work/
+speaking-app/dist/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+*.pem
+*.key
+.ieltsyn-private/
+coverage/
+study-materials/
+private-content/
+# Local study databases and private API configuration
+study-records/
+ai.json
+*.sqlite
+*.sqlite3
+*.db
+
+# Generated visual test artifacts
+.impeccable/

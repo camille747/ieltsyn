@@ -1,0 +1,38 @@
+[
+  {
+    "id": "demo-reading-1",
+    "title": "A community reading room",
+    "chineseTitle": "社区阅览室",
+    "part": "P1",
+    "frequency": "非高频",
+    "pdfUrl": "/resources/reading/demo/demo-reading-1.pdf",
+    "textUrl": "/resources/reading/demo/demo-reading-1.txt",
+    "matchedArchiveItemId": "demo-reading-1",
+    "backgroundOnly": false,
+    "fileName": "demo-reading-1.pdf"
+  },
+  {
+    "id": "demo-reading-2",
+    "title": "Learning through a small garden",
+    "chineseTitle": "在小花园中学习",
+    "part": "P2",
+    "frequency": "非高频",
+    "pdfUrl": "/resources/reading/demo/demo-reading-2.pdf",
+    "textUrl": "/resources/reading/demo/demo-reading-2.txt",
+    "matchedArchiveItemId": "demo-reading-2",
+    "backgroundOnly": false,
+    "fileName": "demo-reading-2.pdf"
+  },
+  {
+    "id": "demo-reading-3",
+    "title": "Designing a quieter street",
+    "chineseTitle": "设计安静的街道",
+    "part": "P3",
+    "frequency": "非高频",
+    "pdfUrl": "/resources/reading/demo/demo-reading-3.pdf",
+    "textUrl": "/resources/reading/demo/demo-reading-3.txt",
+    "matchedArchiveItemId": "demo-reading-3",
+    "backgroundOnly": false,
+    "fileName": "demo-reading-3.pdf"
+  }
+]
